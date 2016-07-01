@@ -39,10 +39,6 @@ namespace AddressBook.Objects
     {
       return _address;
     }
-    public void SetID(int newID)
-    {
-      _id = newID;
-    }
     public int GetID()
     {
       return _id;
@@ -61,7 +57,7 @@ namespace AddressBook.Objects
     }
     public static Contact Find(int searchId)
     {
-      return _contacts[searchId - 1];
+      return _contacts[searchId];
     }
 
   }

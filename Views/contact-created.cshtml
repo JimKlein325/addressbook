@@ -1,8 +1,7 @@
-<h1>You created a contact</h1>
-<h2>@Model.GetName()</h2>
-<h3>@Model.GetPhoneNumber()</h3>
+<h1>You created a contact!</h1>
+<h2>Name: @Model.GetName()</h2>
+<h3>Phone: @Model.GetPhoneNumber()</h3>
+<h3>Address:</h3>
 <h3>@Model.GetAddress().GetStreet()</h3>
-<h3>@Model.GetAddress().GetCity()</h3>
-<h3>@Model.GetAddress().GetState()</h3>
-<h3>@Model.GetAddress().GetZip()</h3>
+<h3>@Model.GetAddress().GetCity(), @Model.GetAddress().GetState()  @Model.GetAddress().GetZip()</h3>
 <a href='/'>Return to All Contacts</a>

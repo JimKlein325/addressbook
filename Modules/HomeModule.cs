@@ -33,13 +33,13 @@ namespace AddressBook
         );
 
         Contact.Save(contact);
-        
+
         return View["contact-created.cshtml", contact];
       };
 
       Get["/contacts/{id}"] = parameters => {
         Contact contact = Contact.Find(parameters.id);
-        return View["contact-created.cshtml", contact];
+        return View["contact-details.cshtml", contact];
       };
     }
   }
