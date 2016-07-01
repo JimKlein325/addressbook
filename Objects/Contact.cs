@@ -59,5 +59,10 @@ namespace AddressBook.Objects
     {
       _contacts.Clear();
     }
+    public static Contact Find(int searchId)
+    {
+      return _contacts[searchId - 1];
+    }
+
   }
 }
