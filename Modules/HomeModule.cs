@@ -4,11 +4,36 @@ using AddressBook.Objects;
 
 namespace AddressBook
 {
+  using AddressBook.Objects;
+
   public class HomeModule : NancyModule
   {
     public HomeModule()
     {
       Get["/"] = _ => {
+        var contacts = Contact.GetAll();
+        return View["index.cshtml", contacts];
+      };
+
+      Get["/contacts/new"] = _ => {
+        return View["contact_form.cshtml"];
+      };
+
+      Post["/contacts/new"] = _ => {
+        var address = new Address(
+          Request.Form["street"],
+          Request.Form["city"],
+          Request.Form["state"],
+          Request.Form["zip"]
+        );
+        var contact = new Contact(
+          Request.Form["name"],
+          Request.Form["phoneNumber"],
+          address
+        );
+
+        Contact.Save(contact);
+
         var contacts = Contact.GetAll();
         return View["index.cshtml", contacts];
       };
