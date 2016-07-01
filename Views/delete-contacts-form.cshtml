@@ -1,0 +1,16 @@
+<h1>Delete All Contacts</h1>
+@if (@Model.Count == 0)
+{
+  <h3>You have no contacts to delete!</h3>
+} else {
+  <h3>Contacts</h3>
+}
+<ul>
+@foreach (var contact in Model)
+{
+  <h3>@contact.GetName()</a></h3>
+}
+</ul>
+<form action="/contacts/deleteAll" method="post">
+   <button type="submit">Submit</button>
+</form>

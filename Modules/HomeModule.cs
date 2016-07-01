@@ -31,15 +31,21 @@ namespace AddressBook
           Request.Form["phoneNumber"],
           address
         );
-
         Contact.Save(contact);
-
         return View["contact-created.cshtml", contact];
       };
-
       Get["/contacts/{id}"] = parameters => {
         Contact contact = Contact.Find(parameters.id);
         return View["contact-details.cshtml", contact];
+      };
+      Get["/contacts/deleteAll"] = _ => {
+        var contacts = Contact.GetAll();
+        return View["delete-contacts-form.cshtml", contacts];
+      };
+
+      Post["/contacts/deleteAll"] = _ => {
+        Contact.DeleteAll();
+        return View["contacts-deleted.cshtml"];
       };
     }
   }
