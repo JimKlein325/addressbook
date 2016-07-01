@@ -1,4 +1,4 @@
-# Ping-Pong
+# Address Book
 
 #### Placement test skill demonstration project, May, 2016
 
