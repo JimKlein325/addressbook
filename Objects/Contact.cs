@@ -13,7 +13,6 @@ namespace AddressBook.Objects
       _name = name;
       _phoneNumber = phoneNumber;
       _address = address;
-
       _id = _contacts.Count;
     }
     public void SetName(string newName)
@@ -39,6 +38,14 @@ namespace AddressBook.Objects
     public Address GetAddress()
     {
       return _address;
+    }
+    public void SetID(int newID)
+    {
+      _id = newID;
+    }
+    public int GetID()
+    {
+      return _id;
     }
     public static List<Contact> GetAll()
     {
