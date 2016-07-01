@@ -6,14 +6,14 @@
 
 ## Description
 
-Address Bool is a sample application for demonstrating basic proficiency in creatig sim ple web apps using Nancy, Razor and related technologies.
+Address Book is a sample application for demonstrating basic proficiency in creating simple web apps using Nancy, Razor and related technologies.
 
-A user enters can build a list of contacts in an address book, view contact details, and clear all of the entries in the address book.  
+A user can enter contact information and build a list of contacts that are displayed as an address book, view contact details, and clear all of the entries in the address book.  
 
 ## Setup/Installation Requirements
 * Install Address Book by cloning this repository:
     https://github.com/JimKlein325/addressbook.git
-* Compile using the "dnx kestrel" command in the project directory
+* Compile using the PowerShell "dnx kestrel" command in the project directory
 * View the app in your browser at "localhost:5004"
 
 ## Technologies Used
